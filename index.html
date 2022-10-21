@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Discrete sets calculator</title>
+</head>
+<body>
+    <header>
+        <h1>Discrete math sets calculator</h1>
+    </header>
+    <main>
+        <div class="singlesets block">
+            <h2>Basic operations with 2 sets</h2>
+            <p>Use spaces to seperate set elements. But keep in mind that extra spaces will be interpreteted as &empty;. Also make sure there are no spaces in the end of set, otherwise they aslo will be interpreteted as &empty; and become a set element</p>
+            <div class="calc-area">
+                <form id="basicSets" action="">
+                    <div class="input-area">
+                    <span>Set A</span>
+                    <input type="text" name="A" placeholder="Enter numbers, e.g: 1 2 3" id="inputA">
+                    </div>
+                    <div class="input-area">
+                        <span>Operation</span>
+                        <select id="operationBasic">
+                            <option id="un">&cup;</option>
+                            <option id="inter">&cap;</option>
+                            <option id="diff">\</option>
+                            <option id="symdiff">&Delta;</option>
+                        </select>
+                    </div>
+                    <div class="input-area">
+                        <span>Set B</span>
+                        <input type="text" name="B" placeholder="Enter numbers, e.g: 2 5 6" id="inputB">
+                    </div>
+                    
+                </form>
+                <button name="submitBasic" id="submitBasic">Calculate</button>
+                <div class="input-area result">
+                    <span>Result:</span>
+                    <p id="inputResBasic"><span class="span-placeholder">(result will be there)</span></p>
+                </div>
+            </div>
+        </div>
+        <div class="universalsets  block">
+            <h2>Universal sets</h2>
+            <p>Use spaces to seperate set elements. But keep in mind that extra spaces will be interpreteted as &empty;. Also make sure there are no spaces in the end of set, otherwise they aslo will be interpreteted as &empty; and become a set element</p>
+            <div class="calc-area">
+                <h3>This is Family of sets A<sub>i</sub>, where i &isin; I
+                    
+                    (here we have I=[1,3], i &isin; ℕ)
+                </h3>
+                <form id="universalSets" action="">
+                    <div class="input-area ai">
+                        <span>Operation</span>
+                        <select id="operationAi">
+                            <option id="unAi">&xcup;A<sub>i</sub></option>
+                            <option id="interAi">&xcap;A<sub>i</sub></option>
+                        </select>
+                    </div>
+                    
+                    <div class="input-area ai">
+                        <span>A<sub>1</sub> (i=1)</span> 
+                        <input type="text" name="A1" placeholder="Enter numbers, e.g: 1 2 3" id="inputA1">
+                    </div>    
+                    <div class="input-area ai">
+                        <span>A<sub>2</sub> (i=2)</span> 
+                        <input type="text" name="A2" placeholder="Enter numbers, e.g: 1 2 3" id="inputA2">
+                    </div>    
+                    <div class="input-area ai">
+                        <span>A<sub>3</sub> (i=3)</span> 
+                        <input type="text" name="A3" placeholder="Enter numbers, e.g: 1 2 3" id="inputA3">
+                    </div>    
+                    
+                </form>
+                <button name="submitAi" id="submitAi">Calculate</button>
+                <div class="input-area result">
+                    <span>Result:</span>
+                    <p id="inputResAi"><span class="span-placeholder">(result will be there)</span></p>
+                </div>               
+            </div>
+        </div>
+    </main>
+    
+    <script src="script.js"></script>
+</body>
+</html>
